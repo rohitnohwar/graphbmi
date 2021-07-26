@@ -28,7 +28,7 @@ function Graph(){
                 }
             })
         });
-    },[])
+    },[]);
     
     return <div class="graph">
     <div class="link"><Link to="/">GO CHECK YOUR OWN BMI</Link></div>

@@ -37,13 +37,14 @@ app.post("/entry", (req, res)=>{
     res.json({result:result});
 });
 
-app.post("/graphdata", (req, res)=>{
+app.get("/graphdata", (req, res)=>{
     Data.find({}, (err,foundData)=>{
         foundData.sort(function(a, b) {
             return parseFloat(a.height) - parseFloat(b.height);
         });
-        foundWeight=foundData.map(o=>o.weight);
-        foundHeight=foundData.map(o=>o.height);
+
+        let foundWeight=foundData.map(o=>o.weight);
+        let foundHeight=foundData.map(o=>o.height);
         res.json({foundWeight:foundWeight, foundHeight:foundHeight});
     });
 });
@@ -55,7 +56,7 @@ if(process.env.NODE_ENV==="production"){
     app.use(express.static("client/build"));
 
     app.get("*", function(req, res){
-        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+        res.sendFile(path.join(__dirname, "client", "build", "index.html"));
     });
 }
 
