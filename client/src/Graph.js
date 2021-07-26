@@ -9,7 +9,7 @@ function Graph(){
         labels:[],
         datasets:[
             {
-                label:"Graph",
+                label:"Height(in m) on x-axis. Weight on y-axis(in kg).",
                 data:[]
             }
         ]
@@ -22,7 +22,7 @@ function Graph(){
                 return{
                     labels:response.data.foundHeight,
                     datasets:[{
-                        label:"Graph",
+                        label:"Height(in m) on x-axis. Weight on y-axis(in kg).",
                         data:response.data.foundWeight
                     }]
                 }
