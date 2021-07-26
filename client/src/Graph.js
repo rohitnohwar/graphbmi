@@ -16,7 +16,7 @@ function Graph(){
     });
 
     useEffect(()=>{
-        axios.get("/graphdata"
+        axios.post("/graphdata"
         ).then((response)=>{
             setData(prevValue=>{
                 return{
