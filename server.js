@@ -38,6 +38,9 @@ app.post("/entry", (req, res)=>{
 
 app.get("/graphdata", (req, res)=>{
     Data.find({}, (err,foundData)=>{
+        foundData.sort(function(a, b) {
+            return parseFloat(a.height) - parseFloat(b.height);
+        });
         foundWeight=foundData.map(o=>o.weight);
         foundHeight=foundData.map(o=>o.height);
         res.json({foundWeight:foundWeight, foundHeight:foundHeight});
