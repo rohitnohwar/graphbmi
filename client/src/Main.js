@@ -38,6 +38,7 @@ function Main(){
 
     return <div class="main-div">
     <form action="/entry" method="POST" class="main">
+    <div class="link-main"><Link to="/graph">SEE THE GRAPH</Link></div>
     <div>BMI CALCULATOR</div>
     <div>Enter weight(in kg of range 0kg to 500kg)</div>
     <div><input name="weight" type="number" step="any" onChange={handleChange} placeholder="0" min="0" max="500" required></input></div>
@@ -45,7 +46,6 @@ function Main(){
     <div><input name="height" type="number" step="any" onChange={handleChange} placeholder="0" min="0" max="3" required></input></div>
     <div><button type="submit" class="reg-button" onClick={handleClick}>CALCULATE</button></div>
     <div>Result: {result}</div>
-    <div><Link to="/graph">SEE THE GRAPH</Link></div>
     </form>
     </div>
 }
