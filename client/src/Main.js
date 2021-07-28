@@ -38,7 +38,7 @@ function Main(){
 
     return <div class="main-div">
     <form action="/entry" method="POST" class="main">
-    <div class="link-main"><Link to="/graph">SEE THE CHART</Link></div>
+    <div class="link-main"><Link to="/graph">SEE THE LINE CHART</Link></div>
     <div>BMI CALCULATOR</div>
     <div>Enter weight(in kg of range 0kg to 500kg)</div>
     <div><input name="weight" type="number" step="any" onChange={handleChange} placeholder="0" min="0" max="500" required></input></div>
