@@ -13,24 +13,24 @@
 
 @media screen and (max-width: 1200px) {
     .important {
-        width: 60rem;
+        width: 55rem;
     }
 }
 
 @media screen and (max-width: 1000px) {
     .important {
-        width: 50rem;
+        width: 45rem;
     }
 }
 
 @media screen and (max-width: 800px) {
     .important {
-        width: 40rem;
+        width: 35rem;
     }
 }
 
 @media screen and (max-width: 500px) {
     .important {
-        width: 25rem;
+        width: 23rem;
     }
 }
