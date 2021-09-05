@@ -10,3 +10,27 @@
 .important{
     width:70rem;
 }
+
+@media screen and (max-width: 1200px) {
+    .important {
+        width: 60rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .important {
+        width: 50rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .important {
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .important {
+        width: 25rem;
+    }
+}

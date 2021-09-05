@@ -36,3 +36,9 @@ div{
     margin-bottom: 1rem;
     font-size: x-large;
 }
+
+@media screen and (max-width:550px) {
+    .main {
+        width: 20rem;
+    }
+}
