@@ -1,5 +1,5 @@
 .main-div{
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 .main{
@@ -9,6 +9,7 @@
     text-align: center;
     border-radius: 1rem;
     padding:1rem;
+    height: 450px;
 }
 
 input{
@@ -35,6 +36,11 @@ div{
 .link-main{
     margin-bottom: 1rem;
     font-size: x-large;
+}
+
+.message-of-invalidity {
+    color:red;
+    margin-top: 20px;
 }
 
 @media screen and (max-width:550px) {

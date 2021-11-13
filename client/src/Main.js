@@ -10,6 +10,7 @@ function Main(){
     });
 
     const [result, setResult]=useState(0);
+    const [message, setMessage]=useState("")
 
     
     function handleChange(event){
@@ -24,17 +25,22 @@ function Main(){
 
     function handleClick(event){
         event.preventDefault();
-        const numbers={
-            weight:info.weight,
-            height:info.height
+        if(info.weight && info.height && info.weight>0 && info.weight<=500 && info.height>=0 && info.height<=3){
+            setMessage("")
+            const numbers={
+                weight:info.weight,
+                height:info.height
+            }
+
+            axios.post("/entry", numbers
+            ).then((response)=>{
+                setResult(response.data.result);
+            });
         }
-
-        axios.post("/entry", numbers
-        ).then((response)=>{
-            setResult(response.data.result);
-        });
+        else{
+            setMessage("Weight should be greater than 0kg and less than/equal to 500kg. Height should be greater than 0m and less than/equal to 3m. Filling both the details are compulsory")
+        }
     }
-
 
     return <div class="main-div">
     <form action="/entry" method="POST" class="main">
@@ -46,6 +52,7 @@ function Main(){
     <div><input name="height" type="number" step="any" onChange={handleChange} placeholder="0" min="0" max="3" required></input></div>
     <div><button type="submit" class="reg-button" onClick={handleClick}>CALCULATE</button></div>
     <div>Result: {result}</div>
+    <div className="message-of-invalidity">{message}</div>
     </form>
     </div>
 }
