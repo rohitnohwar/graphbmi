@@ -1,4 +1,5 @@
 const Data = require("../models/datamodel")
+const mongoose=require("mongoose");
 
 function graphfunction(req, res){
     Data.find({}, (err,foundData)=>{

@@ -1,4 +1,5 @@
 const Data = require("../models/datamodel")
+const mongoose=require("mongoose");
 
 function mainfunction(req, res){
     const result=req.body.weight/(req.body.height**2);
