@@ -2,8 +2,8 @@ import React, { Suspense } from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 // import Main from "./Main";
 // import Graph from "./Graph";
-const Main = React.lazy(() => import('./Main.js'));
-const Graph = React.lazy(() => import('./Graph.js'));
+const Main = React.lazy(() => import('./Components/Main/Main.js'));
+const Graph = React.lazy(() => import('./Components/Graph/Graph.js'));
 
 // function App() {
 //   return (
